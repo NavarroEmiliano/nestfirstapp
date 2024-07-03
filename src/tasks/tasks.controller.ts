@@ -26,7 +26,7 @@ export class TasksController {
   deleteTask(@Param('id') id: string) {
     this.tasksService.deleteTask(id);
   }
-  @Patch('/id')
+  @Patch('/:id')
   updateTask(@Param('id') id: string, @Body() updatedFields: UpdateTaskDTO) {
     return this.tasksService.updateTask(id, updatedFields);
   }
